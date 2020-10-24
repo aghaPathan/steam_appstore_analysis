@@ -1,0 +1,1063 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/11/2020 8:27:41 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-88RUR7O"
+  DTS:CreatorName="DESKTOP-88RUR7O\Agha Awais"
+  DTS:DTSID="{1B06A2ED-FF2F-490F-A764-F75A33EEA1D7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{F95BEE76-27DA-4117-9C6D-0BCD0F4D75BF}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-88RUR7O.steam]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{C904CD8E-299F-4EED-8A0E-1F6C1C214E70}"
+      DTS:ObjectName="DESKTOP-88RUR7O.steam">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-88RUR7O;Initial Catalog=steam;Integrated Security=True;Application Name=SSIS-Package-{C904CD8E-299F-4EED-8A0E-1F6C1C214E70}DESKTOP-88RUR7O.steam;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-88RUR7O.steam_test]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{337AEADC-BBB4-45D1-A0EB-F207C84AF2EB}"
+      DTS:ObjectName="DESKTOP-88RUR7O.steam_test">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-88RUR7O;Initial Catalog=steam_test;Integrated Security=True;Application Name=SSIS-Package-{337AEADC-BBB4-45D1-A0EB-F207C84AF2EB}DESKTOP-88RUR7O.steam_test;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-88RUR7O.steam_test 1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{EC149A9F-530B-46BD-9FCF-71682F517951}"
+      DTS:ObjectName="DESKTOP-88RUR7O.steam_test 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-88RUR7O;Initial Catalog=steam_test;Integrated Security=True;Application Name=SSIS-Package-{EC149A9F-530B-46BD-9FCF-71682F517951}DESKTOP-88RUR7O.steam_test 1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{89C22EBB-2103-4AFA-AC7F-B287768EF5F4}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=G:\Fiverr\suneetsnt\steam-store-games\steam.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{FBC08EAA-9471-4308-B75B-360293117996}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=G:\Fiverr\suneetsnt\steam-store-games\steam.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SSIS steam csv connection]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="SSIS steam csv connection"
+      DTS:DTSID="{08293453-FCD5-4266-B4EC-58E8AC5B2881}"
+      DTS:ObjectName="SSIS steam csv connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="G:\Fiverr\suneetsnt\steam-store-games\steam.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="appid"
+              DTS:DTSID="{F3BEF328-75C9-4B10-920A-C892A8F83B71}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="45"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{4610FBF7-093F-4562-A63E-F3880A55EF49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="46"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="release_date"
+              DTS:DTSID="{D4575C6B-779C-4356-A7FB-9808927C11E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="english"
+              DTS:DTSID="{5343E79F-9447-4569-9499-113C6D10CFCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="71"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="developer"
+              DTS:DTSID="{EAB48571-5C78-4432-98D8-E893EF13BDD6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="54"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="publisher"
+              DTS:DTSID="{9D6A3F1F-6701-4EDF-BC79-EAF52A3F749D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="platforms"
+              DTS:DTSID="{DC43A79E-D7AD-4E37-941F-42A4CDF862A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="required_age"
+              DTS:DTSID="{818995BD-FBEA-4F96-BA40-C2804217E21E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="230"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categories"
+              DTS:DTSID="{DE3451F1-13DE-4406-AC52-351BE5FC11EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="184"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="genres"
+              DTS:DTSID="{FE36AE28-2CE3-4E69-8359-3BBFB2ED8F10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="steamspy_tags"
+              DTS:DTSID="{A0961E7E-D935-43D1-9CC0-0C28C12B2123}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="achievements"
+              DTS:DTSID="{0CA8059C-F2D2-4AE0-A76D-7ECE24573F2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="positive_ratings"
+              DTS:DTSID="{55F7EFA1-9E2B-49F0-84C0-F5B0FD4D557B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="negative_ratings"
+              DTS:DTSID="{3518E0D7-9C72-4014-B971-16C38971E384}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="average_playtime"
+              DTS:DTSID="{05B12790-6919-4415-BC62-F2B628424349}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="median_playtime"
+              DTS:DTSID="{6F4EEE75-265E-42E8-B197-9FFBF8C4C675}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="19"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="owners"
+              DTS:DTSID="{F164282B-E2E6-42E0-99F2-3023E510A7C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="price"
+              DTS:DTSID="{4F767578-E784-41E1-B623-393E4C28F763}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load steam csv file"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{394F2DE8-D79F-4707-96D4-DA3AC65AACE2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load steam csv file"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load steam csv file\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."transformed_table"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load steam csv file\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-88RUR7O.steam]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-88RUR7O.steam]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[appid]"
+                      cachedDataType="i4"
+                      cachedName="appid"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[appid]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[appid]" />
+                    <inputColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[name]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[name]" />
+                    <inputColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[median_playtime]"
+                      cachedDataType="i4"
+                      cachedName="median_playtime"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[median_playtime]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[median_playtime]" />
+                    <inputColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[net_ratings]"
+                      cachedDataType="i4"
+                      cachedName="net_ratings"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[net_ratings]"
+                      lineageId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Output].Columns[net_ratings]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[appid]"
+                      dataType="i4"
+                      name="appid" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[net_ratings]"
+                      dataType="i4"
+                      name="net_ratings" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[median_playtime]"
+                      dataType="i4"
+                      name="median_playtime" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load steam csv file\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load steam csv file\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."steam"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load steam csv file\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-88RUR7O.steam]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-88RUR7O.steam]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[appid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[appid]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[appid]"
+                      name="appid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[name]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[release_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[release_date]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[release_date]"
+                      name="release_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[english]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[english]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[english]"
+                      name="english"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[developer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[developer]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[developer]"
+                      name="developer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[publisher]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[publisher]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[publisher]"
+                      name="publisher"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[platforms]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[platforms]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[platforms]"
+                      name="platforms"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[required_age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[required_age]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[required_age]"
+                      name="required_age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[categories]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[categories]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[categories]"
+                      name="categories"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[genres]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[genres]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[genres]"
+                      name="genres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[steamspy_tags]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[steamspy_tags]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[steamspy_tags]"
+                      name="steamspy_tags"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[achievements]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[achievements]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[achievements]"
+                      name="achievements"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[positive_ratings]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[positive_ratings]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[positive_ratings]"
+                      name="positive_ratings"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[negative_ratings]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[negative_ratings]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[negative_ratings]"
+                      name="negative_ratings"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[average_playtime]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[average_playtime]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[average_playtime]"
+                      name="average_playtime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[median_playtime]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[median_playtime]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[median_playtime]"
+                      name="median_playtime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[owners]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[owners]"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[owners]"
+                      name="owners"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[price]"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[price]"
+                      name="price"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[appid]"
+                      dataType="i4"
+                      name="appid" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[release_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="release_date" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[english]"
+                      dataType="i4"
+                      name="english" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[developer]"
+                      dataType="wstr"
+                      length="255"
+                      name="developer" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[publisher]"
+                      dataType="wstr"
+                      length="255"
+                      name="publisher" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[platforms]"
+                      dataType="wstr"
+                      length="255"
+                      name="platforms" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[required_age]"
+                      dataType="i4"
+                      name="required_age" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[categories]"
+                      dataType="nText"
+                      name="categories" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[genres]"
+                      dataType="wstr"
+                      length="255"
+                      name="genres" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[steamspy_tags]"
+                      dataType="wstr"
+                      length="255"
+                      name="steamspy_tags" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[achievements]"
+                      dataType="i4"
+                      name="achievements" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[positive_ratings]"
+                      dataType="i4"
+                      name="positive_ratings" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[negative_ratings]"
+                      dataType="i4"
+                      name="negative_ratings" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[average_playtime]"
+                      dataType="i4"
+                      name="average_playtime" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[median_playtime]"
+                      dataType="i4"
+                      name="median_playtime" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[owners]"
+                      dataType="wstr"
+                      length="255"
+                      name="owners" />
+                    <externalMetadataColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[price]"
+                      dataType="r8"
+                      name="price" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[appid]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[appid]"
+                      name="appid" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[release_date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[release_date]"
+                      name="release_date" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[english]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[english]"
+                      name="english" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[developer]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[developer]"
+                      name="developer" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[publisher]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[publisher]"
+                      name="publisher" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[platforms]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[platforms]"
+                      name="platforms" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[required_age]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[required_age]"
+                      name="required_age" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[categories]"
+                      dataType="nText"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[categories]"
+                      name="categories" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[genres]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[genres]"
+                      name="genres" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[steamspy_tags]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[steamspy_tags]"
+                      name="steamspy_tags" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[achievements]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[achievements]"
+                      name="achievements" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[positive_ratings]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[positive_ratings]"
+                      name="positive_ratings" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[negative_ratings]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[negative_ratings]"
+                      name="negative_ratings" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[average_playtime]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[average_playtime]"
+                      name="average_playtime" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[median_playtime]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[median_playtime]"
+                      name="median_playtime" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[owners]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[owners]"
+                      name="owners" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[price]"
+                      dataType="r8"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[price]"
+                      name="price" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load steam csv file\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load steam csv file\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load steam csv file\Derived Column.Inputs[Derived Column Input].Columns[positive_ratings]"
+                      cachedDataType="i4"
+                      cachedName="positive_ratings"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[positive_ratings]" />
+                    <inputColumn
+                      refId="Package\Load steam csv file\Derived Column.Inputs[Derived Column Input].Columns[negative_ratings]"
+                      cachedDataType="i4"
+                      cachedName="negative_ratings"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[negative_ratings]" />
+                    <inputColumn
+                      refId="Package\Load steam csv file\Derived Column.Inputs[Derived Column Input].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="name"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[name]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[UPPER](#{Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[name]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">UPPER(name)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load steam csv file\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Output].Columns[net_ratings]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Output].Columns[net_ratings]"
+                      name="net_ratings"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[positive_ratings]} - #{Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output].Columns[negative_ratings]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">positive_ratings - negative_ratings</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load steam csv file\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load steam csv file.Paths[ADO NET Source Output]"
+              endId="Package\Load steam csv file\Derived Column.Inputs[Derived Column Input]"
+              name="ADO NET Source Output"
+              startId="Package\Load steam csv file\ADO NET Source.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Load steam csv file.Paths[Derived Column Output]"
+              endId="Package\Load steam csv file\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load steam csv file\Derived Column.Outputs[Derived Column Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Load steam csv file"
+          TopLeft="158,95" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load steam csv file">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Load steam csv file\ADO NET Destination"
+          TopLeft="337,160" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Load steam csv file\ADO NET Source"
+          TopLeft="113,69" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Load steam csv file\Derived Column"
+          TopLeft="418,42" />
+        <EdgeLayout
+          Id="Package\Load steam csv file.Paths[ADO NET Source Output]"
+          TopLeft="271,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147,-27"
+              Start="0,0"
+              End="139.5,-27">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="69.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69.5,0"
+                    Point2="73.5,0"
+                    Point3="73.5,-4" />
+                  <mssgle:LineSegment
+                    End="73.5,-23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73.5,-23"
+                    Point2="73.5,-27"
+                    Point3="77.5,-27" />
+                  <mssgle:LineSegment
+                    End="139.5,-27" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load steam csv file.Paths[Derived Column Output]"
+          TopLeft="495,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-68.5,76"
+              Start="0,0"
+              End="-68.5,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34"
+                    Point2="0,38"
+                    Point3="-4,38" />
+                  <mssgle:LineSegment
+                    End="-64.5,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-64.5,38"
+                    Point2="-68.5,38"
+                    Point3="-68.5,42" />
+                  <mssgle:LineSegment
+                    End="-68.5,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load steam csv file\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load steam csv file\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
