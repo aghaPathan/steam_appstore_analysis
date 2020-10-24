@@ -1,5 +1,4 @@
-# steam_dataset_analysis
-This repository contains the results from data analysis of Steam App Store set from Kaggle.  
+# This repository contains the results from data analysis of Steam App Store set from Kaggle.  
 
 <div align="center">
 <img src="https://github.com/aghaPathan/steam_dataset_analysis/blob/main/Part1/Tableau/Book1.png" width="70%" height="70%">
